@@ -47,9 +47,9 @@ namespace Dio.Projetos
         private static void InserirProjeto()
         {
             Console.WriteLine("Inserir novo projeto");
-            foreach (int i in Enum.GetValues(typeof(Categoria))) //getvalues vai retornar todas opções
+            foreach (int i in Enum.GetValues(typeof(Categoria))) 
             {
-                Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Categoria), i)); //getname irá mostrar todas opções 
+                Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Categoria), i));  
             }
             Console.Write("Digite o tipo de projeto entre as opções acima: ");
             int entradacategoria = int.Parse(Console.ReadLine());

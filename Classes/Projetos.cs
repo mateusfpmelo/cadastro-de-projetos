@@ -5,7 +5,7 @@ namespace Dio.Projetos
 {
     public class Projeto : EntidadeBase
     {
-        //Atributos
+        
         private Categoria Categoria { get; set; }
         private string NomeCliente { get; set; }
         private string StatusProjeto { get; set; }
@@ -13,7 +13,7 @@ namespace Dio.Projetos
 
     private bool Excluido{get; set;}
 
-    //Métodos
+    
         public Projeto(int id, Categoria categoria, string NomeCliente, string StatusProjeto, int AnoConclusao)
         { 
             this.Id = id;
@@ -21,12 +21,12 @@ namespace Dio.Projetos
             this.NomeCliente = NomeCliente;
             this.StatusProjeto = StatusProjeto;
             this.AnoConclusao = AnoConclusao; 
-        this.Excluido = false; //Sempre criar com a informacao de excluido
+        this.Excluido = false;
 
         }
         public override string ToString()
-        // Quando vamos tentar dar um write line -> ele executar a ação abaixo retornando o noem do cliente status do projeto e ano de conclusão.
-        // Environment como o sistema operacional interpreta uma nova linha 
+        
+         
         {
             string retorno = "";
             retorno += "Nome do cliente: " + this.NomeCliente + Environment.NewLine;
@@ -48,7 +48,7 @@ namespace Dio.Projetos
         {
             return this.Excluido;
         }
-        public void excluir() { // Método
+        public void excluir() { 
             this.Excluido = true;
         }
     }

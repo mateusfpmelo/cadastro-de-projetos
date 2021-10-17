@@ -4,10 +4,10 @@ using Dio.Projetos.Interfaces;
 
 namespace Dio.Projetos
 {
-    public class ProjetoRepositorio : IRepositorio<Projeto> //Implementar uma interface, repositorio de projetos - reaproveitando interfaces
+    public class ProjetoRepositorio : IRepositorio<Projeto> 
     {
         private List<Projeto> listaprojetos = new List<Projeto>();
-        //Criar variavel dos meus projetos
+        
         public void Atualiza(int id, Projeto objeto)
         { 
             listaprojetos[id] = objeto; 
@@ -20,13 +20,13 @@ namespace Dio.Projetos
         { 
             listaprojetos.Add(objeto);
         }
-        public List<Projeto> Lista() //Método lista irá retornar uma lista de projetos
+        public List<Projeto> Lista() 
         { 
             return listaprojetos;
         }
         public int ProximoID()
         { 
-            return listaprojetos.Count; // Irei retornar sempre o próximo ID +1 do vetor.
+            return listaprojetos.Count; 
         }
         public Projeto RetornaPorId(int id)
         { 
